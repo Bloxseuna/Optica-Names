@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optica Names</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">Optica Names</div>
+      <nav class="tabbar" aria-label="Generator pages">
+        <button class="tab-btn active" data-tab="roblox">Roblox</button>
+        <button class="tab-btn" data-tab="discord">Discord</button>
+      </nav>
+    </header>
+
+    <main class="page-wrap">
+      <section class="card tab-panel active" id="panel-roblox">
+        <p class="eyebrow">AI Username Generator</p>
+        <h1>Roblox Names</h1>
+        <p class="subtitle">Generate modern Roblox usernames in one click.</p>
+
+        <div class="result-box" id="roblox-result">Tap Generate Name to begin.</div>
+
+        <button class="primary-btn" id="roblox-generate">Generate Name</button>
+
+        <div class="action-row" id="roblox-actions" hidden>
+          <button class="ghost-btn" id="roblox-copy">Copy</button>
+          <button class="ghost-btn" id="roblox-retry">Retry</button>
+        </div>
+
+        <p class="tries" id="roblox-tries">Tries left: 5/5</p>
+      </section>
+
+      <section class="card tab-panel" id="panel-discord">
+        <p class="eyebrow">AI Username Generator</p>
+        <h1>Discord Names</h1>
+        <p class="subtitle">Create cool Discord handles and gamer tags instantly.</p>
+
+        <div class="result-box" id="discord-result">Tap Generate Name to begin.</div>
+
+        <button class="primary-btn" id="discord-generate">Generate Name</button>
+
+        <div class="action-row" id="discord-actions" hidden>
+          <button class="ghost-btn" id="discord-copy">Copy</button>
+          <button class="ghost-btn" id="discord-retry">Retry</button>
+        </div>
+
+        <p class="tries" id="discord-tries">Tries left: 5/5</p>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal" id="premium-modal" role="dialog" aria-modal="true" aria-labelledby="premium-title" hidden>
+      <div class="modal-card">
+        <h2 id="premium-title">Upgrade to Premium?</h2>
+        <p>You used all 5 tries. Upgrade for unlimited AI generations.</p>
+        <div class="modal-actions">
+          <button class="primary-btn small" id="premium-yes">Yes</button>
+          <button class="ghost-btn small" id="premium-no">No thanks</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
